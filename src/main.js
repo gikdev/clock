@@ -57,7 +57,7 @@ let isDark = true
 let time = new Date()
 
 // UTILS
-const zeroify = obj => (obj < 10) ? ('0${obj}') : (obj)
+const zeroify = obj => (obj < 10) ? (`0${obj}`) : (obj)
 const isDay = () => (5 < time.getHours() && time.getHours() < 20)
 const playTap = () => tap.play()
 
