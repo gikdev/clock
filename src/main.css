@@ -16,7 +16,7 @@
   --clr-dark: #252521;
   --clr-light: #EBEDEF;
   --clr-lighter: #F8FAFB;
-  --clr-primary: #12B886;
+  --clr-primary: #15aabf;
 }
 * { transition: color 100ms, background 100ms; }
 html[data-theme="dark"] {
@@ -38,7 +38,11 @@ body {
   font-family: Vazirmatn;
   line-height: 1;
 }
-h1 { margin: 0; }
+h1, h2, p { margin: 0; }
+::selection {
+  background: var(--clr-primary);
+  color: var(--clr-text);
+}
 
 /* Composition */
 .page {
@@ -60,9 +64,11 @@ h1 { margin: 0; }
 .fz-2x { font-size: 3rem; }
 .aic { align-items: center; }
 .gap-sm { gap: 0.5rem; }
+.gap-md { gap: 1rem; }
 .gap-lg { gap: 2rem; }
 .cursor-pointer { cursor: var(--cursor-pointer); }
 .cursor-text { cursor: var(--cursor-text); }
+.z-topper { z-index: 10; }
 
 /* Blocks */
 button {
@@ -88,17 +94,36 @@ hr {
   width: 100%;
 }
 
-.clock {
+.clock, .dialog {
   background-color: var(--clr-bg-primary);
   width: 30rem;
   padding: 1.5rem 2rem;
   border-radius: 2rem;
   accent-color: var(--clr-primary);
 }
+.dialog p {
+  line-height: 1.5;
+  text-align: justify;
+}
+
+a, a:visited {
+  transition: color 200ms, border-color 200ms, opacity 200ms;
+  color: var(--clr-primary);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  opacity: 0.8;
+}
+a:hover, a:active {
+  color: var(--clr-primary);
+  border-bottom: 1px solid currentColor;
+  opacity: 1;
+}
+
 
 /* Exception */
 [data-theme="light"] button { background-color: hsla(60, 6%, 7%, 0.1); }
 [data-theme="dark"] button { background-color: hsla(0, 0%, 100%, 0.1); }
+[hidden] { display: none; }
 button[data-type="icon"] {
   padding: 0;
   background: transparent;

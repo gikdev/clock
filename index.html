@@ -9,16 +9,27 @@
   <script defer src="./src/main.js"></script>
 </head>
 <body>
-  <!-- X Circle Icon:
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>
-  -->
   <audio src="./assets/tap.mp3" id="tap"></audio>
+  <div class="page centered z-topper" id="modal" hidden>
+    <div class="dialog flex-sb col gap-md">
+      <div class="flex-sb aic font-sahel">
+        <h2>درباره «ساعت»</h2>
+        <button id="close-modal" data-type="icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg></button>
+      </div>
+      <hr>
+      <p>«ساعت» یه  ساعت خیلی ساده‌اس. <a href="https://github.com/gikdev/clock">این پروژه متن‌بازه</a>، ولی <strong>تقلب از روش ممنوعه</strong>...</p>
+      <p>
+        راه ارتباطی: <br>
+        <a dir="ltr" class="font-kode" href="https://eitaa.com/wd_bahrami">@wd_bahrami</a>
+      </p>
+    </div>
+  </div>
   <div class="page centered">
     <div class="clock flex-sb col gap-lg">
       <div class="flex-sb aic">
         <button id="theme-toggle" data-type="icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" /></svg></button>
         <h1 class="cursor-text font-sahel">ساعت</h1>
-        <button id="info-toggle" data-type="icon" disabled><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" /></svg></button>
+        <button id="open-modal" data-type="icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" /></svg></button>
       </div>
       <hr>
       <div dir="ltr" class="flex-sb font-kode">
