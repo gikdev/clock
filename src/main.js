@@ -79,6 +79,7 @@ function handleTick() {
 }
 function setAuto(val) {
   isAuto = val
+  auto.checked = val
   timeBtns.forEach(btn => btn.disabled = isAuto)
   if (isAuto) {
     hours.removeEventListener('click', inputEditH)
@@ -135,10 +136,39 @@ clickables.forEach(el => el.addEventListener('click', playTap))
 themeToggle.addEventListener('click', toggleTheme)
 setInterval(showTime, 1000)
 setInterval(handleTick, 1000)
-document.addEventListener('DOMContentLoaded', () => {
 
-})
 // MISC.
 showTime()
 setAuto(false)
 const infoDialog = new Dialog({ modal, openBtn, closeBtn })
+new CustomContextMenu({
+  dark: true,
+  RTL: true,
+  items: [
+    { 
+      label: "تعویض تم", 
+      cb() {
+        toggleTheme()
+        playTap()
+      }, 
+      isLine: false 
+    },
+    { 
+      label: "اتوماتیک", 
+      cb() {
+        setAuto(!auto.checked)
+        playTap()
+      }, 
+      isLine: false 
+    },
+    { isLine: true },
+    { 
+      label: "تازه‌سازی صفحه", 
+      cb() {
+        location.reload()
+        playTap()
+      }, 
+      isLine: false 
+    },
+  ]
+})

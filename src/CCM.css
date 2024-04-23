@@ -1,0 +1,36 @@
+.context {
+  --bg-primary: #fff;
+  --bg-secondary: #eee;
+  --text: black;
+  background-color: var(--bg-primary);
+  color: var(--text);
+  box-shadow: 0 0 1em hsla(0, 0%, 0%, 0.1);
+  border-radius: 0.5em;
+  box-sizing: border-box;
+  cursor: var(--cursor-pointer, pointer);
+  margin: 0;
+  overflow: hidden;
+  padding-left: 0;
+  padding-right: 0;
+  position: fixed;
+  visibility: hidden;
+  width: 200px;
+  z-index: 20;
+}
+.context--dark {
+  --bg-primary: #232323;
+  --bg-secondary: #343434;
+  --text: #fff;
+}
+.context hr {
+  background: var(--bg-secondary);
+  border: none;
+  height: 2px;
+  opacity: 1;
+}
+.context__item {
+  font-size: 0.9em;
+  list-style-type: none;
+  padding: 1em 1.5em;
+}
+.context__item:hover { background: var(--bg-secondary); }
